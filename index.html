@@ -1,24 +1,182 @@
-<html>
-<head>    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liverpool FC</title>
   <style>
-     body{
-         text-align: center;
-         background-image: linear-gradient(rgb(500, 0, 0), rgb(72, 201, 176));
-         min-width: 100%;
-         min-height: 100%;}
-     
-     h2 {color:rgb(222, 222, 222);}
-         
+    body {
+        text-align: center;
+        background-image: linear-gradient(rgb(500, 0, 0), rgb(72, 201, 176));
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
     
-    p {color:rgb(222, 222, 222);}
-             
+    h1, h2, p {
+        color: rgb(222, 222, 222);
+    }
+
+    /* H1 Styling to make it stand out */
+    h1 {
+        font-size: 4em; /* Larger font for more impact */
+        font-family: 'Arial Black', sans-serif;
+        color: #d10000; /* Strong Liverpool red */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.5); /* Adds a shadow to enhance the text */
+        margin-top: 50px;
+        letter-spacing: 2px; /* Spacing between letters for a bolder look */
+    }
+
+    h2, p {
+        color: rgb(222, 222, 222);
+    }
+
+    /* Navigation Bar */
+    nav {
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 15px;
+        transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+        background-color: rgb(72, 201, 176);
+        color: black;
+    }
+
+    /* Footer */
+    footer {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+    }
+
+    img {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+
+    /* History Section */
+    #history {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 40px;
+        margin-top: 20px;
+    }
+
+    #history h2 {
+        color: rgb(72, 201, 176);
+    }
+
+    #history p {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #d10000; /* Liverpool Red */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s;
+    }
+
+    #backToTop:hover {
+        background-color: #f1c40f; /* Light yellow hover effect */
+    }
+
   </style>
-  
 </head>
-
 <body>
-<h1>liverpool</h1>
 
-<h2> this website is all about <b>liverpool!</b>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#history">History</a>
+    <a href="https://www.liverpoolfc.com/fixtures/mens/2024">Matches</a>
+    <a href="https://www.liverpoolfc.com/info/contact-us">Contact</a>
+  </nav>
 
-</h2>
+  <h1>Liverpool FC</h1>
+
+  <h2>This website is all about <b>Liverpool!</b></h2>
+
+  <img src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/34/thumb_133455_default_news_size_5.jpeg" alt="Liverpool FC Stadium">
+
+  <p>
+    Liverpool FC is an English professional football (soccer) club based in Liverpool, England. It is the most successful English team in European football tournament history, having won six European Cup/Champions League trophies. The club has also won the English top-division league title 19 times.
+  </p>
+
+  <!-- History Section -->
+  <section id="history">
+    <h2>History of Liverpool FC</h2>
+    <p>
+      Liverpool Football Club was founded in 1892 and has become one of the most iconic and successful football clubs in the world. The club’s home ground, Anfield, has been the site of some of football's greatest moments. 
+    </p>
+    <p>
+      Liverpool's early success came under manager Bill Shankly, who transformed the club into a dominant force in English and European football. In the 1970s and 1980s, under Shankly's successors Bob Paisley and Joe Fagan, Liverpool won numerous league titles and European cups. The club won four European Cups during this period, cementing their place as one of the most successful teams in European football.
+    </p>
+    <p>
+      The 1990s and 2000s were more challenging for Liverpool, with new teams emerging in English football, but the club regained its prominence in the 2000s. Liverpool's 5th European Cup win in 2005 in the famous “Miracle of Istanbul” remains one of the most memorable moments in football history.
+    </p>
+    <p>
+      Under the guidance of Jürgen Klopp, Liverpool has achieved new heights, winning the 2019 UEFA Champions League and the 2020 Premier League title. Klopp's philosophy and leadership have brought Liverpool back to the top of world football, with the club consistently competing for major trophies both domestically and internationally.
+    </p>
+  </section>
+
+  <br><br><br>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Liverpool FC Fan Page. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+  <script>
+    // Show the "Back to Top" button when scrolling down
+    window.onscroll = function() {
+      const backToTopButton = document.getElementById("backToTop");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    // Smooth scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
